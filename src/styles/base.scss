@@ -1,0 +1,22 @@
+body {
+  font-size: $main-font-size;
+}
+
+.main-content {
+  padding-top: $header-height;
+}
+
+//@media (max-width: 1200px) and (min-width: 992px) {
+//  body {
+//    font-size: 1.8vw;
+//  }
+//}
+
+//.container {
+//  background-image: url("../assets/img/img1.jpg");
+//  background-size: cover;
+//  background-position: center;
+//  width: 15rem;
+//  height: 15rem;
+//  border: 1px solid red;
+//}

@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
+const PrettierPlugin = require("prettier-webpack-plugin");
 
 module.exports = (env, argv) => {
 
@@ -50,29 +51,41 @@ module.exports = (env, argv) => {
 		devServer: {
 			port: 4200,
 			open: true,
-			hot: isDev
+			hot: true
 		},
 		plugins: [
 			new CleanWebpackPlugin(),
+			new PrettierPlugin(),
 			new HTMLWebpackPlugin({
-				filename: 'index.html',
-				template: './index.html',
+				template: path.resolve(__dirname, 'src/template/index.pug'),
+				filename: path.resolve(__dirname, 'dist/index.html'),
 				minify: {
-					collapseWhitespace: isProd
+					collapseWhitespace: false
 				}
 			}),
 			new HTMLWebpackPlugin({
-				filename: "pages/index.html",
-				template: './pages/about.html',
-				minify: {
-					collapseWhitespace: isProd
-				}
+				template: './template/pages/createschool.pug',
+				filename: path.resolve(__dirname, 'dist/pages/createschool.html'),
+				minify: false
+			}),
+			new HTMLWebpackPlugin({
+				template: './template/pages/course.pug',
+				filename: path.resolve(__dirname, 'dist/pages/course.html'),
+				minify: false
 			}),
 			// new CopyWebpackPlugin({
 			// 	patterns: [
 			// 		{
-			// 			from: './assets/favicon.ico',
-			// 			to: path.resolve(__dirname, 'dist')
+			// 			from: './assets/img',
+			// 			to: path.resolve(__dirname, 'dist/imgages')
+			// 		}
+			// 	]
+			// }),
+			// new CopyWebpackPlugin({
+			// 	patterns: [
+			// 		{
+			// 			from: './assets/fonts',
+			// 			to: path.resolve(__dirname, 'dist/fonts')
 			// 		}
 			// 	]
 			// }),
@@ -92,7 +105,7 @@ module.exports = (env, argv) => {
 			            {
 			                loader: MiniCssExtractPlugin.loader,
 			                options: {
-			                    publicPath: "../",
+			                    publicPath: "../dist",
 			                },
 			            },
 			            "css-loader",
@@ -101,11 +114,34 @@ module.exports = (env, argv) => {
 			    },
 				{
 					test: /\.(png|jpg|svg|gif)$/,
-					use: ['file-loader']
+					use: [
+						{
+							loader: "file-loader",
+							options: {
+								name: isDev ? "images/[name].[hash].[ext]" : "images/[name].[ext]",
+							},
+						},
+					],
 				},
 				{
 					test: /\.(ttf|woff|woff2|eot)$/,
-					use: ['file-loader']
+					use: [
+						{
+							loader: "file-loader",
+							options: {
+								name: isDev ? "fonts/[name].[hash].[ext]" : "fonts/[name].[ext]",
+							},
+						},
+					],
+				},
+				{
+					test: /\.pug$/,
+					use: [
+						'html-loader?minimize=false',
+						'pug-html-loader?pretty=true'
+					]
+					// test: /\.pug$/,
+					// loader: 'pug-loader'
 				}
 			]
 		}

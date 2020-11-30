@@ -1,2 +1,2 @@
-import '@/scripts/base';
-import '@/styles/main.scss';
+import "@/scripts/base";
+import "@/styles/main.scss";
