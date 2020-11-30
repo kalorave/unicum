@@ -49,7 +49,7 @@ module.exports = (env, argv) => {
 		},
 		optimization: optimization(),
 		devServer: {
-			port: 4200,
+			port: 4212,
 			open: true,
 			hot: true
 		},
@@ -59,19 +59,14 @@ module.exports = (env, argv) => {
 			new HTMLWebpackPlugin({
 				template: path.resolve(__dirname, 'src/template/index.pug'),
 				filename: path.resolve(__dirname, 'dist/index.html'),
-				minify: {
-					collapseWhitespace: false
-				}
 			}),
 			new HTMLWebpackPlugin({
 				template: './template/pages/createschool.pug',
 				filename: path.resolve(__dirname, 'dist/pages/createschool.html'),
-				minify: false
 			}),
 			new HTMLWebpackPlugin({
 				template: './template/pages/course.pug',
 				filename: path.resolve(__dirname, 'dist/pages/course.html'),
-				minify: false
 			}),
 			// new CopyWebpackPlugin({
 			// 	patterns: [

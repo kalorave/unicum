@@ -1,33 +1,29 @@
-@function rem($size, $context: $main-font-size) {
-  //@return $size / $context * 1rem;
-}
-
 #header {
   height: $header-height;
-  background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
   width: 100%;
   z-index: $header-zindex;
   display: flex;
   align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.15);
 
   .header-wrap {
     display: flex;
     justify-content: space-between;
-    width: 1230px;
+    width: 123rem;
     margin: 0 auto;
-
-    .header-logo {
-    }
+    color: #ffffff;
 
     .header-nav {
       display: flex;
       align-items: center;
-      margin-left: -20%;
 
       & > a {
-        margin: 0 5px;
-        display: inline-block;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 2rem;
+        margin-right: 5.5rem;
       }
     }
 
@@ -35,6 +31,17 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      .action-phnumber {
+        font-family: "Lato", sans-serif;
+        font-weight: bold;
+        font-size: 2.4rem;
+        margin-left: 1.5rem;
+      }
+
+      .action-letter {
+        margin: 0 1.8rem;
+      }
     }
   }
 }

@@ -1,0 +1,11 @@
+#block_course
+    h2.block-headline Курсы
+    .cards-wrap
+        - for (let i = 1; i < 9; i++)
+            .card-item
+                if (i === 1)
+                    +course_card(5, 'special')
+                else if (i === 3)
+                    +course_card(7)
+                else
+                    +course_card

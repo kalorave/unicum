@@ -1,7 +1,16 @@
-@import "~normalize.css";
-@import "helpers/fonts.scss";
-@import "helpers/variables.scss";
+//@import "~normalize.css";
+@import "helpers/reset";
+@import "helpers/fonts";
+@import "helpers/variables";
+@import "helpers/grid";
 
-@import "base.scss";
+@import "base";
 
-@import "template/header.scss";
+@import "template/header";
+
+//index
+@import "template/index_blocks/block_banner";
+@import "template/index_blocks/block_course";
+
+@import "template/course_card";
+@import "template/discount_icon";

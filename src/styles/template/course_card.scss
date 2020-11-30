@@ -1,0 +1,108 @@
+.course-card {
+  width: 100%;
+  border-left: 0.1rem solid #bdbdbd;
+  border-right: 0.1rem solid #bdbdbd;
+  box-sizing: border-box;
+
+  .header {
+    background-image: url("../assets/img/img3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 23.2rem;
+  }
+
+  &.special {
+    .header {
+      height: 21rem;
+    }
+  }
+
+  .content {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #000000;
+    padding: 1.1rem 2rem;
+    line-height: 1.15;
+    .price {
+      margin-top: 0.9rem;
+      & span {
+        &:nth-child(1) {
+          font-family: "Open Sans", sans-serif;
+          font-weight: 600;
+          font-size: 2rem;
+          color: #222222;
+        }
+        &:nth-child(2) {
+          font-family: "Lato", sans-serif;
+          font-weight: 500;
+          font-size: 2rem;
+          color: #222222;
+          margin: 0 1.2rem;
+        }
+        &:nth-child(3) {
+          font-family: "Open Sans", sans-serif;
+          font-weight: 600;
+          font-size: 28px;
+          color: #f44d4d;
+        }
+      }
+    }
+  }
+  .special-content {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #000000;
+    padding: 1.1rem 2rem;
+    line-height: 1.15;
+    .days {
+      display: flex;
+      align-items: center;
+      margin-top: 1.1rem;
+      font-size: 1.6rem;
+      span {
+        &:last-child {
+          margin: -0.1rem 0 0 0.8rem;
+        }
+      }
+    }
+    .old-price {
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+      font-size: 1.4rem;
+      text-decoration-line: line-through;
+      color: #f44d4d;
+      margin: 0.9rem 0 0 0.3rem;
+    }
+    .price {
+      span {
+        display: inline-block;
+        margin-top: 0.2rem;
+        &:first-child {
+          font-family: "Lato", sans-serif;
+          font-weight: 600;
+          font-size: 1.6rem;
+          color: #222222;
+        }
+        &:last-child {
+          font-family: "Lato", sans-serif;
+          font-weight: bold;
+          font-size: 1.8rem;
+          color: #222222;
+          margin-left: 0.6rem;
+        }
+      }
+    }
+    .btn-wrap {
+      display: flex;
+      justify-content: center;
+      padding-top: 1rem;
+      .btn {
+        width: 19.4rem;
+        height: 4.8rem;
+      }
+    }
+  }
+}

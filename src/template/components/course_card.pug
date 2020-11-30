@@ -1,0 +1,28 @@
+mixin course_card(discount, specialClass)
+    div(class="course-card " + specialClass)
+        .header
+            - if(discount)
+                +discount_icon(discount)
+        if (specialClass)
+            .special-content
+                div Уроков: 20
+                div Игр: 10
+                div.days
+                    span
+                        include ../../assets/img/icon_clock.svg
+                    span 25 дней
+                .old-price $ 1,227 USD
+                div.price
+                    span от
+                    span $ 999,999 USD
+                .btn-wrap
+                    a.btn Подробнее
+        else
+            .content
+                div Игр
+                div Уроков
+                div Вебинаров
+                div.price
+                    span 25 дней
+                    span от
+                    span $ 9,999
