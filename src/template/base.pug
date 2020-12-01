@@ -1,5 +1,6 @@
-include components/discount_icon
-include components/course_card
+include mixins/header
+include mixins/discount_icon
+include mixins/course_card
 
 doctype html
 html(lang="ru")
@@ -8,7 +9,7 @@ html(lang="ru")
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1")
     body
-        include components/header.pug
+        +header
         .main-content
             block content
         div#test_img_container

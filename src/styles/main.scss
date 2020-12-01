@@ -6,11 +6,16 @@
 
 @import "base";
 
-@import "template/header";
+//***********************
+//***templates
+//***********************
 
-//index
-@import "template/index_blocks/block_banner";
-@import "template/index_blocks/block_course";
+//mixins
+@import "template/mixins/header";
+@import "template/mixins/discount_icon";
+@import "template/mixins/course_card";
 
-@import "template/course_card";
-@import "template/discount_icon";
+//includes
+@import "template/includes/banner_1";
+@import "template/includes/block_course";
+@import "template/includes/banner_2";

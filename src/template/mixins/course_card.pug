@@ -1,7 +1,7 @@
 mixin course_card(discount, specialClass)
     div(class="course-card " + specialClass)
         .header
-            - if(discount)
+            if(discount)
                 +discount_icon(discount)
         if (specialClass)
             .special-content

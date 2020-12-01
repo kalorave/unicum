@@ -1,0 +1,43 @@
+.banner_2 {
+  background-image: url("../assets/img/img2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 12.3rem;
+
+  .filter {
+    background-image: url("../assets/img/blur.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  h2 {
+    box-sizing: border-box;
+    padding: 7rem 0 0.2rem 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 4.8rem;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #ffffff;
+  }
+
+  p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 3.8rem;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .btn-wrap {
+    text-align: center;
+    padding: 3.8rem 0 8.9rem 0;
+    .btn {
+      width: 24.7rem;
+      height: 4.8rem;
+    }
+  }
+}
