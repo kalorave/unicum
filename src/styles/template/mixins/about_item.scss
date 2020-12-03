@@ -1,0 +1,30 @@
+.about_item {
+  display: flex;
+  .icon-wrap {
+    width: 5.5rem;
+    height: 6.6rem;
+    margin-left: -0.3rem;
+    display: flex;
+    justify-content: center;
+    flex: 1 0 auto;
+  }
+  .text-wrap {
+    padding-left: 1.5rem;
+
+    h3 {
+      font-family: "Open Sans", sans-serif;
+      font-weight: bold;
+      font-size: 1.8rem;
+      color: #000000;
+      padding-bottom: 1.4rem;
+    }
+
+    p {
+      font-family: "Open Sans", sans-serif;
+      font-weight: normal;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      color: #68696c;
+    }
+  }
+}

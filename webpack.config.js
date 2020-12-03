@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const PrettierPlugin = require("prettier-webpack-plugin");
+const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 
 module.exports = (env, argv) => {
 
@@ -86,7 +87,8 @@ module.exports = (env, argv) => {
 			// }),
 			new MiniCssExtractPlugin({
 				filename: filename('css')
-			})
+			}),
+			new SVGSpritemapPlugin()
 		],
 		module: {
 			rules: [
