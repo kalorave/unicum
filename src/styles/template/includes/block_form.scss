@@ -1,0 +1,91 @@
+.block_form {
+  padding-top: 4.1rem;
+  h2 {
+    letter-spacing: -0.1rem;
+  }
+  .subtitle {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #222222;
+    margin-top: 1.3rem;
+  }
+
+  & > form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60rem;
+    margin: 4rem auto 0 auto;
+
+    .form-item {
+      display: flex;
+      margin-bottom: 1.6rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+
+      &:nth-child(1) {
+        order: 1;
+      }
+      &:nth-child(2) {
+        order: 2;
+      }
+      &:nth-child(3) {
+        order: 4;
+      }
+      &:nth-child(4) {
+        order: 3;
+      }
+
+      input {
+        box-sizing: border-box;
+        border: 2px solid #18b9bb;
+        outline: none;
+        width: 25.886rem;
+        height: 4.8rem;
+
+        &[type="text"] {
+          font-family: "Open Sans", sans-serif;
+          font-weight: bold;
+          font-size: 1.6rem;
+          color: #68696c;
+          padding-left: 0.7rem;
+          background-color: #e5e5e5;
+          transition: all 0.15s linear;
+
+          &::placeholder {
+            font-weight: normal;
+            color: #68696c;
+          }
+
+          &.error {
+            border-color: #f44d4d;
+            color: #f44d4d;
+          }
+        }
+      }
+
+      .info {
+        width: 25.886rem;
+        height: 4.8rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        font-family: "Open Sans", sans-serif;
+        font-weight: bold;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        color: #828282;
+        & > a {
+          color: #18b9bb;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

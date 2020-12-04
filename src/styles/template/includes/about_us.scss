@@ -1,13 +1,13 @@
 .about_us {
-  @include grid-container;
   padding: 7.1rem 0 0 0;
   .cards-wrap {
-    @include grid-row;
     margin-top: 5.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     .card-item {
-      @include grid-item;
-      @include col-desktop(4);
       margin-bottom: 4.5rem;
+      width: 37rem;
     }
   }
 }

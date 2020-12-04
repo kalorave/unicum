@@ -1,0 +1,10 @@
+section.block_testimonials
+    .container
+        h2.block-headline Отзывы
+        .cards-wrap
+            - for (let i = 0; i < 3; i++)
+                .card-item
+                    if (i === 1)
+                        +testimonial_card('special')
+                    else
+                        +testimonial_card

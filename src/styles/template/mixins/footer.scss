@@ -1,0 +1,57 @@
+#footer {
+  background-color: #515151;
+  color: white;
+  padding-top: 6.3rem;
+  padding-bottom: 4.2rem;
+  margin-top: 0.5rem;
+
+  .footer-wrap {
+    width: 119rem;
+    margin: 0 auto;
+
+    & > nav {
+      font-family: "Lato", sans-serif;
+      font-weight: normal;
+      font-size: 1.8rem;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -5.5rem;
+        border: 0.1rem solid white;
+        opacity: 0.2;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        width: 98.5%;
+      }
+
+      .links {
+        & > a {
+          display: inline-block;
+          margin-right: 3.5rem;
+        }
+      }
+
+      .social {
+        a {
+          margin-right: 0.8rem;
+        }
+      }
+    }
+
+    .additional {
+      display: flex;
+      justify-content: space-between;
+      font-family: "Lato", sans-serif;
+      font-weight: normal;
+      font-size: 1.8rem;
+      opacity: 0.4;
+      margin-top: 9.4rem;
+      padding: 0 0.5rem;
+    }
+  }
+}

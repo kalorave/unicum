@@ -1,0 +1,32 @@
+.block_testimonials {
+  background-color: white;
+  margin-top: 6.4rem;
+  padding-top: 6.8rem;
+  padding-bottom: 9.1rem;
+
+  .cards-wrap {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    margin-top: 5rem;
+
+    .card-item {
+      width: 37rem;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        right: -1.5rem;
+        top: 0;
+        height: 100%;
+        border: 1px dashed #e5e5e5;
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -2,7 +2,6 @@
 @import "helpers/reset";
 @import "helpers/fonts";
 @import "helpers/variables";
-@import "helpers/grid";
 
 @import "base";
 
@@ -15,9 +14,13 @@
 @import "template/mixins/discount_icon";
 @import "template/mixins/course_card";
 @import "template/mixins/about_item";
+@import "template/mixins/testimonial_card";
+@import "template/mixins/footer";
 
 //includes
 @import "template/includes/banner_1";
 @import "template/includes/block_course";
 @import "template/includes/banner_2";
 @import "template/includes/about_us";
+@import "template/includes/block_testimonials";
+@import "template/includes/block_form";

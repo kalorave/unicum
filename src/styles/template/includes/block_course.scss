@@ -1,13 +1,13 @@
 .block_course {
-  @include grid-container;
   padding-top: 13rem;
   .cards-wrap {
-    @include grid-row;
     margin-top: 4.3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     .card-item {
-      @include grid-item;
-      @include col-desktop(3);
       margin-bottom: 5rem;
+      width: 27rem;
     }
   }
 }

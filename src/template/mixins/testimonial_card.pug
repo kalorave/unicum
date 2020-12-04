@@ -1,0 +1,19 @@
+mixin testimonial_card(special)
+    div(class=["testimonial_card", special ? special : ''])
+        h3 Excellent trip
+        .info-wrap
+            span.raiting
+                - for (let i = 0; i < 5; i++)
+                    span.icon-wrap
+                        include ../../assets/img/icon_ratingstar.svg
+            span.date 26 may
+        if (!special)
+            p.content Excellent trip. Discovery Russia took good care . Hotel Tchaikovsky, St Petersburg was superb.
+                | The places selected, the commentary and care of the guides was awesome. My idea of Russia and Russians has
+                | changed for the better.
+        else
+            .content
+        .profile
+            span.icon-wrap
+                include ../../assets/img/icon_profileicon.svg
+            span Jonathan Mccluskey

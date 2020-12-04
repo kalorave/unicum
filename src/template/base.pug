@@ -2,6 +2,8 @@ include mixins/header
 include mixins/discount_icon
 include mixins/course_card
 include mixins/about_item
+include mixins/testimonial_card
+include mixins/footer
 
 doctype html
 html(lang="ru")
@@ -13,4 +15,5 @@ html(lang="ru")
         +header
         .main-content
             block content
+        +footer
         div#test_img_container
