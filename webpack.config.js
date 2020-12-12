@@ -8,6 +8,8 @@ const TerserWebpackPlugin = require('terser-webpack-plugin')
 const PrettierPlugin = require("prettier-webpack-plugin");
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 
+
+
 module.exports = (env, argv) => {
 
 	const isDev = argv.mode === 'development'
@@ -50,7 +52,7 @@ module.exports = (env, argv) => {
 		},
 		optimization: optimization(),
 		devServer: {
-			port: 4212,
+			port: 4213,
 			open: true,
 			hot: true
 		},

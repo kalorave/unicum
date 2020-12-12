@@ -1,26 +1,25 @@
-.block_course {
-  padding-top: 13rem;
+.about {
+  padding: 7.1rem 0 0 0;
   .cards-wrap {
-    margin-top: 4.3rem;
+    margin-top: 5.4rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     .card-item {
-      margin-bottom: 5rem;
-      width: 27rem;
+      margin-bottom: 4.5rem;
+      width: 37rem;
     }
   }
   .more {
     font-family: "Lato", sans-serif;
     font-weight: bold;
-    font-size: 1.8rem;
+    font-size: 18px;
     text-align: center;
     color: #000000;
-    text-transform: capitalize;
-    margin-top: 3rem;
-    margin-bottom: 7.5rem;
+    padding-top: 6rem;
     span {
       cursor: pointer;
+      text-transform: capitalize;
     }
   }
 }

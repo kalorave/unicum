@@ -1,0 +1,31 @@
+section.banner_3 {
+  background-image: url("../assets/img/img5.png");
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+  margin-bottom: 5rem;
+
+  .container {
+    padding-left: 37.8rem;
+    padding-bottom: 17.7rem;
+    h1 {
+      font-size: 7.2rem;
+      margin-top: 11.6rem;
+      color: #ffffff;
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      letter-spacing: -1px;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    p {
+      font-size: 4.8rem;
+      margin-top: 5.3rem;
+      color: #ffffff;
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      letter-spacing: -1px;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
